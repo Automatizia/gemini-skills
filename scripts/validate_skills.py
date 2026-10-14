@@ -68,6 +68,10 @@ def main() -> int:
             continue
         fields, parse_errors = parse_frontmatter(spec)
         errors.extend(f"{spec.relative_to(ROOT)}: {error}" for error in parse_errors)
+        if not directory.name.startswith("gemini-skills-"):
+            errors.append(
+                f"{directory.relative_to(ROOT)}: folder name must start with 'gemini-skills-' (standard: gemini-skills-<objetivo>)"
+            )
         if fields.get("name") and fields["name"] != directory.name:
             errors.append(
                 f"{spec.relative_to(ROOT)}: name {fields['name']!r} does not match folder {directory.name!r}"

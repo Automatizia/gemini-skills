@@ -1,5 +1,5 @@
 ---
-name: strix-security-audit
+name: gemini-skills-security-audit
 description: Run an authorized security assessment with Strix CLI after explicit scope approval and environment preflight.
 license: Apache-2.0
 ---
