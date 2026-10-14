@@ -1,0 +1,40 @@
+name: Reportar un error
+description: Reporta un defecto reproducible en un skill o en su tooling.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: No publiques vulnerabilidades, secretos ni datos personales. Para incidentes de seguridad usa SECURITY.md.
+  - type: input
+    id: skill
+    attributes:
+      label: Skill o componente
+      placeholder: strix-security-audit
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Commit o versión
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Pasos para reproducir
+      description: Usa un entorno autorizado y datos no sensibles.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado y resultado observado
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Entorno y logs redactados
+    validations:
+      required: false

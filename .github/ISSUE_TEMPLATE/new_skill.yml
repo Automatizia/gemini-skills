@@ -1,0 +1,36 @@
+name: Proponer un skill
+description: Propón un skill nuevo con objetivo, límites y validación.
+title: "[Skill]: "
+labels: ["enhancement"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Nombre propuesto (kebab-case)
+    validations:
+      required: true
+  - type: textarea
+    id: need
+    attributes:
+      label: Usuario y problema que resuelve
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Flujo esperado, entradas y salidas
+    validations:
+      required: true
+  - type: textarea
+    id: permissions
+    attributes:
+      label: Permisos, límites y modos de fallo seguro
+      description: Indica objetivos, herramientas y autorización requerida.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Cómo validar el skill
+    validations:
+      required: true
